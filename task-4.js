@@ -127,35 +127,164 @@
 
 
 
-const team = {
-    players: [
-        { name: "Alex", score: 12 },
-        { name: "Ivan", score: 18 },
-    ],
-    addPlayer(player) {
-        this.players.push(player)
-    },
-    getTotalScore() {
-        let total = 0;
-        for (const player of this.players) {
-            total += player.score
-        }
-        return total
-    },
-    getPlayers() {
-        return this.players
-    }
+// const team = {
+//     players: [
+//         { name: "Alex", score: 12 },
+//         { name: "Ivan", score: 18 },
+//     ],
+//     addPlayer(player) {
+//         this.players.push(player)
+//     },
+//     getTotalScore() {
+//         let total = 0;
+//         for (const player of this.players) {
+//             total += player.score
+//         }
+//         return total
+//     },
+//     getPlayers() {
+//         return this.players
+//     }
 
-};
+// };
 
 
-console.log(team.getPlayers());
+// console.log(team.getPlayers());
 
-team.addPlayer({
-    name: "Anna",
-    score: 20,
-});
+// team.addPlayer({
+//     name: "Anna",
+//     score: 20,
+// });
 
-console.log(team.getPlayers());
+// console.log(team.getPlayers());
 
-console.log(team.getTotalScore()); // 50
+// console.log(team.getTotalScore()); // 50
+
+
+// function checkWarehouseCapacity(goods, maxCapacity) {
+//     let total = 0;
+//     for (const good in goods) {
+//         total += goods[good]
+
+//     }
+//     return total <= maxCapacity
+// }
+
+
+
+// console.log(
+//     checkWarehouseCapacity(
+//         { milk: 10, bread: 5, eggs: 20 },
+//         40
+//     )
+// ); // true
+
+// console.log(
+//     checkWarehouseCapacity(
+//         { milk: 15, bread: 10, eggs: 30 },
+//         50
+//     )
+// ); // false
+
+// console.log(
+//     checkWarehouseCapacity(
+//         { apples: 5, oranges: 7, bananas: 8 },
+//         20
+//     )
+// ); // true
+
+// console.log(
+//     checkWarehouseCapacity(
+//         { apples: 12, oranges: 10, bananas: 9 },
+//         25
+//     )
+// ); // false
+
+
+
+// function calculateTotalPrice(products) {
+//     let total = 0;
+//     for (const product of products) {
+//         total += product.price * product.quantity
+//     }
+//     return total
+// }
+
+
+
+// console.log(
+//     calculateTotalPrice([
+//         { name: "Apple", price: 20, quantity: 5 },
+//         { name: "Banana", price: 15, quantity: 4 },
+//     ])
+// ); // 160
+
+// console.log(
+//     calculateTotalPrice([
+//         { name: "Milk", price: 40, quantity: 2 },
+//         { name: "Bread", price: 25, quantity: 3 },
+//     ])
+// ); // 155
+
+// console.log(calculateTotalPrice([])); // 0
+
+
+
+// const car = {
+//     brand: "Toyota",
+//     mileage: 120000,
+//     changeBrand(newBrand) {
+//         this.brand = newBrand
+//     },
+//     drive(distance) {
+//         this.mileage += distance
+//     },
+//     getInfo() {
+//         return `${this.brand} has ${this.mileage} km millage`
+//     }
+
+// };
+
+
+// console.log(car.getInfo());
+
+// car.changeBrand("BMW");
+
+// car.drive(500);
+
+// console.log(car.getInfo());
+
+
+
+// const bank = {
+//     clients: [],
+//     addClient(client) {
+//         this.clients.push(client)
+//     },
+//     getClients() {
+//         return this.clients
+//     },
+//     getClientsCount() {
+//         return this.clients.length
+//     }
+// };
+
+// bank.addClient({
+//     name: "Alex",
+//     money: 500,
+// });
+
+// bank.addClient({
+//     name: "Ivan",
+//     money: 700,
+// });
+
+// bank.addClient({
+//     name: "Oleg",
+//     money: 1200,
+// });
+
+// console.log(bank.getClientsCount());
+// // 3
+
+// console.log(bank.getClients());
