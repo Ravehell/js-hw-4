@@ -288,3 +288,97 @@
 // // 3
 
 // console.log(bank.getClients());
+
+
+// function getPropertiesCount(obj) {
+//     return Object.keys(obj).length
+// }
+
+// function getAllKeys(obj) {
+//     return Object.keys(obj)
+// }
+
+
+// function getAllValues(obj) {
+//     return Object.values(obj)
+// }
+
+
+// function getTotal(object) {
+//     let total = 0;
+//     for (const obj of Object.values(object)) {
+//         total += obj
+//     }
+//     return total
+// }
+
+
+// function getMaxValue(object) {
+//     return Math.max(...Object.values(object))
+
+// }
+
+
+// function getMinValue(obj) {
+//     return Math.min(...Object.values(obj))
+// }
+
+
+
+// function joinKeys(obj) {
+//     return Object.keys(obj).join(", ")
+// }
+
+
+// function joinValues(obj) {
+//     return Object.values(obj).join("-")
+// }
+
+
+// function doubleValues(object) {
+//     const result = {};
+//     for (const key of Object.keys(object)) {
+//         result[key] = object[key] * 2
+//     }
+//     return result
+// }
+
+
+// function addBonus(salaries) {
+//     const result = {};
+//     for (const key of Object.keys(salaries)) {
+//         result[key] = salaries[key] + 100
+//     }
+//     return result
+// }
+
+
+// function discountProducts(products, discount) {
+//     const result = {};
+//     for (const key of Object.keys(products)) {
+//         result[key] = products[key] - discount
+//     }
+//     return result
+// }
+
+
+// function countExpensiveProducts(products) {
+//     let count = 0;
+//     for (const value of Object.values(products)) {
+//         if (value > 100) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+
+function countEvenNumbers(numbers) {
+    let count = 0;
+    for (const value of Object.values(numbers)) {
+        if (value % 2 === 0) {
+            count++
+        }
+    }
+    return count
+}
