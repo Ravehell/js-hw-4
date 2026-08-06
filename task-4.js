@@ -373,12 +373,304 @@
 // }
 
 
-function countEvenNumbers(numbers) {
-    let count = 0;
-    for (const value of Object.values(numbers)) {
-        if (value % 2 === 0) {
-            count++
+// function countEvenNumbers(numbers) {
+//     let count = 0;
+//     for (const value of Object.values(numbers)) {
+//         if (value % 2 === 0) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+
+
+// function isEnoughCapacity(products, containerSize) {
+//     let result = 0;
+//     for (const product in products) {
+//         result += products[product]
+//     }
+//     return result <= containerSize
+// }
+
+
+// console.log(
+//     isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
+// ); // true
+
+// console.log(
+//     isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
+// ); // false
+
+// console.log(
+//     isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)
+// ); // true
+
+// console.log(
+//     isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)
+// ); // false
+
+
+// function calcAverageCalories(days) {
+//     if (days.length === 0) {
+//         return 0
+//     }
+
+//     let result = 0;
+//     for (const day of days) {
+//         result += day.calories
+//     }
+//     return result / days.length
+// }
+
+
+// console.log(
+//     calcAverageCalories([
+//         { day: "monday", calories: 3010 },
+//         { day: "tuesday", calories: 3200 },
+//         { day: "wednesday", calories: 3120 },
+//         { day: "thursday", calories: 2900 },
+//         { day: "friday", calories: 3450 },
+//         { day: "saturday", calories: 3280 },
+//         { day: "sunday", calories: 3300 }
+//     ])
+// ); // 3180
+
+// console.log(
+//     calcAverageCalories([
+//         { day: "monday", calories: 2040 },
+//         { day: "tuesday", calories: 2270 },
+//         { day: "wednesday", calories: 2420 },
+//         { day: "thursday", calories: 1900 },
+//         { day: "friday", calories: 2370 },
+//         { day: "saturday", calories: 2280 },
+//         { day: "sunday", calories: 2610 }
+//     ])
+// ); // 2270
+
+// console.log(
+//     calcAverageCalories([])
+// ); // 0
+
+
+// const profile = {
+//     username: "Jacob",
+//     playTime: 300,
+//     changeUsername(newName) {
+//         this.username = newName
+//     },
+//     updatePlayTime(hours) {
+//         this.playTime += hours
+//     },
+//     getInfo() {
+//         return `${this.username} has ${this.playTime} in hours!`
+//     }
+// };
+
+
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo()); // "Marco has 320 active hours!"
+
+
+// function calculateTotalPrice(scores) {
+//     let total = 0;
+//     for (const score in scores) {
+//         total += scores[score]
+//     }
+//     return total
+// }
+
+
+// console.log(
+//     calculateTotalPrice({
+//         apple: 20,
+//         banana: 15,
+//         orange: 30,
+//     })
+// ); // 65
+
+// console.log(
+//     calculateTotalPrice({
+//         bread: 35,
+//         milk: 40,
+//         cheese: 120,
+//     })
+// ); // 195
+
+// console.log(
+//     calculateTotalPrice({})
+// ); // 0
+
+
+// function countExpensiveProducts(products, minPrice) {
+//     let total = 0;
+//     for (const product in products) {
+//         if (products[product] > minPrice)
+//             total++
+//     }
+//     return total
+// }
+
+// console.log(
+//     countExpensiveProducts(
+//         {
+//             apple: 20,
+//             banana: 15,
+//             orange: 30,
+//             kiwi: 50,
+//         },
+//         25
+//     )
+// ); // 2
+
+// console.log(
+//     countExpensiveProducts(
+//         {
+//             milk: 40,
+//             bread: 30,
+//             water: 20,
+//         },
+//         35
+//     )
+// ); // 1
+
+// console.log(
+//     countExpensiveProducts({}, 50)
+// ); // 0
+
+// function getMaxValue(numbers) {
+//     return Math.max(...Object.values(numbers))
+// }
+
+
+// function getAverageScore(scores) {
+//     let total = 0;
+//     for (const score in scores) {
+//         total += scores[score]
+//     }
+//     return total / Object.keys(scores).length
+// }
+
+
+// console.log(
+//     getAverageScore({
+//         math: 100,
+//         english: 80,
+//         history: 70,
+//     })
+// ); // 83.33333333333333
+
+// console.log(
+//     getAverageScore({
+//         math: 90,
+//         english: 90,
+//     })
+// ); // 90
+
+
+
+// function getTotalCalories(days) {
+//     if (days.length === 0) {
+//         return 0
+//     }
+
+//     let total = 0;
+//     for (const day of days) {
+//         total += day.calories
+//     }
+//     return total
+// }
+
+
+// console.log(
+//     getTotalCalories([
+//         { day: "Monday", calories: 3000 },
+//         { day: "Tuesday", calories: 2500 },
+//         { day: "Wednesday", calories: 2800 },
+//     ])
+// ); // 8300
+
+// console.log(
+//     getTotalCalories([])
+// ); // 0
+
+
+// const team = {
+//     players: [],
+//     addPlayer(player) {
+//         this.players.push(player)
+//     },
+//     getPlayers() {
+//         return this.players
+//     },
+//     getPlayersCount() {
+//         return this.players.length
+//     },
+//     getTotalScore() {
+//         let total = 0;
+//         for (const player of this.players) {
+//             total += player.score
+//         }
+//         return total
+//     }
+
+// };
+
+
+// team.addPlayer({
+//     name: "Alex",
+//     score: 15,
+// });
+
+// team.addPlayer({
+//     name: "Ivan",
+//     score: 20,
+// });
+
+// team.addPlayer({
+//     name: "Oleg",
+//     score: 18,
+// });
+
+// console.log(team.getPlayers());
+// // [
+// //   { name: "Alex", score: 15 },
+// //   { name: "Ivan", score: 20 },
+// //   { name: "Oleg", score: 18 }
+// // ]
+
+// console.log(team.getPlayersCount());
+// // 3
+
+
+
+const bank = {
+    clients: [],
+    addClient(client) {
+        this.clients.push(client)
+    },
+    getClients() {
+        return this.clients
+    },
+    getClientsCount() {
+        return this.clients.length
+    },
+    getTotalMoney() {
+        let total = 0;
+        for (const client of this.clients) {
+            total += client.money
         }
+        return total
+    },
+    findPlayer(name) {
+        for (const client of this.clients) {
+            if (client.name === name)
+                return client
+        }
+        return null
     }
-    return count
-}
+};
