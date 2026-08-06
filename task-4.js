@@ -648,29 +648,170 @@
 
 
 
-const bank = {
-    clients: [],
-    addClient(client) {
-        this.clients.push(client)
+// const bank = {
+//     clients: [],
+//     addClient(client) {
+//         this.clients.push(client)
+//     },
+//     getClients() {
+//         return this.clients
+//     },
+//     getClientsCount() {
+//         return this.clients.length
+//     },
+//     getTotalMoney() {
+//         let total = 0;
+//         for (const client of this.clients) {
+//             total += client.money
+//         }
+//         return total
+//     },
+//     findPlayer(name) {
+//         for (const client of this.clients) {
+//             if (client.name === name)
+//                 return client
+//         }
+//         return null
+//     }
+// };
+
+
+
+// function countBooks(library) {
+//     let total = 0;
+//     for (const librar of Object.values(library)) {
+//         total += library[librar]
+//     }
+//     return total
+// }
+
+
+// function canBuyAll(products, money) {
+//     let total = 0;
+//     for (const product of Object.values(products)) {
+//         total += product
+//     }
+//     return total <= money
+// }
+
+
+// function getAverageTemperature(days) {
+//     if (days.length === 0) {
+//         return 0
+//     }
+
+//     let total = 0;
+//     for (const day of days) {
+//         total += day.temperature
+//     }
+//     return total / days.length
+// }
+
+
+// const account = {
+//     owner: "Ivan",
+//     balance: 500,
+//     deposit(amount) {
+//         this.balance += amount
+//     },
+//     withdraw(amount) {
+//         this.balance -= amount
+//     },
+//     getBalance() {
+//         return this.balance
+//     }
+// };
+
+// function findMostExpensive(products) {
+//     let total = Object.values(products);
+//     if (total.length === 0) {
+//         return 0
+//     }
+
+//     return Math.max(...total)
+// }\
+
+
+// const shop = {
+//     products: [
+//         { name: "Milk", price: 40 },
+//         { name: "Bread", price: 30 },
+//     ],
+//     addProduct(product) {
+//         this.products.push(product)
+//     },
+//     getProducts() {
+//         return this.products
+//     },
+//     getTotalPrice() {
+//         let total = 0;
+//         for (const product of this.products) {
+//             total += product.price
+//         }
+//         return total
+//     }
+// };
+
+
+// const team = {
+//     players: [
+//         { name: "Alex", score: 12 },
+//         { name: "Ivan", score: 18 },
+//     ],
+//     addPlayer(player) {
+//         this.players.push(player)
+//     },
+//     findPlayer(name) {
+//         for (const player of this.players) {
+//             if (player.name === name) {
+//                 return player
+//             }
+//         }
+//         return null
+//     },
+//     getBestPlayer() {
+//         let total = this.players[0];
+//         for (const player of this.players) {
+//             if (player.score > total.score) {
+//                 total = player
+//             }
+//         }
+//         return total
+//     }
+// };
+
+
+const library = {
+    books: [
+        { title: "Harry Potter", pages: 320 },
+        { title: "The Hobbit", pages: 295 },
+    ],
+    addBook(book) {
+        this.books.push(book)
     },
-    getClients() {
-        return this.clients
+    findBook(title) {
+        for (const book of this.books) {
+            if (book.title === title) {
+                return title
+            }
+        }
+        return null
     },
-    getClientsCount() {
-        return this.clients.length
-    },
-    getTotalMoney() {
-        let total = 0;
-        for (const client of this.clients) {
-            total += client.money
+    getBiggestBook() {
+        let moreBook = this.books[0]
+        for (const book of this.books) {
+            if (book.pages > moreBook.pages) {
+                moreBook = book
+            }
         }
         return total
     },
-    findPlayer(name) {
-        for (const client of this.clients) {
-            if (client.name === name)
-                return client
+    getTotalPages() {
+        let total = 0;
+        for (const book of this.books) {
+            total += book.pages
         }
-        return null
+        return total
     }
+
 };
